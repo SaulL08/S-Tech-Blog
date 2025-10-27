@@ -1,0 +1,25 @@
+# robots.txt para S-Tech Blog
+
+# Permitir acceso a todos los bots
+User-agent: *
+Allow: /
+
+# Bloquear acceso a archivos y carpetas privadas
+Disallow: /S-TECH-FRONT/pages/login.html
+Disallow: /S-TECH-FRONT/pages/editor.html
+Disallow: /uploads/
+Disallow: /*.json$
+
+# Sitemap
+Sitemap: https://tu-dominio.com/sitemap.xml
+
+# Bots específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl-delay para bots agresivos
+User-agent: *
+Crawl-delay: 10

@@ -1,0 +1,161 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--brand-dark) 0%, #001122 100%);
+  padding: 20px;
+}
+
+html.dark .login-page {
+  background: linear-gradient(135deg, var(--brand) 0%, #000811 100%);
+}
+
+.login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  padding: 48px 40px;
+}
+
+html.dark .login-card {
+  background: var(--card);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  color: var(--brand-dark);
+}
+
+html.dark .login-header h1 {
+  color: var(--brand);
+}
+
+.login-header p {
+  color: var(--muted-dark);
+  font-size: 1rem;
+}
+
+html.dark .login-header p {
+  color: var(--muted);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-dark);
+}
+
+html.dark .form-group label {
+  color: var(--text);
+}
+
+.form-group input {
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 2px solid var(--ring-light);
+  background: var(--bg-light);
+  color: var(--text-dark);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+html.dark .form-group input {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--ring);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--brand-dark);
+}
+
+html.dark .form-group input:focus {
+  border-color: var(--brand);
+}
+
+.error-message {
+  display: none;
+  padding: 12px;
+  background: #fee;
+  color: #c33;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  border: 1px solid #fcc;
+}
+
+.btn-login {
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--brand-dark);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+html.dark .btn-login {
+  background: var(--brand);
+}
+
+.btn-login:hover {
+  opacity: 0.9;
+}
+
+.login-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.back-link {
+  color: var(--muted-dark);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+}
+
+html.dark .back-link {
+  color: var(--muted);
+}
+
+.back-link:hover {
+  color: var(--brand-dark);
+}
+
+html.dark .back-link:hover {
+  color: var(--brand);
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 32px 24px;
+  }
+}

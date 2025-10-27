@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Página de Soporte - S-Tech Blog</title>
+  </head>
+  <body>
+    <div id="header"></div>
+
+    <main id="view">
+      <section class="support-section">
+        <div class="container">
+          <div class="support-header">
+            <h1>¿Necesitas ayuda?</h1>
+            <p>Estamos aquí para asistirte. Envíanos tu consulta o reporta un problema.</p>
+          </div>
+
+          <div class="support-grid">
+            <!-- Formulario de Contacto -->
+            <div class="support-card">
+              <div class="card-icon">
+                <i class="ph-fill ph-envelope"></i>
+              </div>
+              <h2>Contáctanos</h2>
+              <p>¿Tienes una pregunta o sugerencia? Envíanos un mensaje.</p>
+
+              <form id="contactForm" class="support-form">
+                <div class="form-group">
+                  <label for="contactName">Nombre completo</label>
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    required
+                    placeholder="Tu nombre"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactEmail">Email</label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    required
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactSubject">Asunto</label>
+                  <input
+                    type="text"
+                    id="contactSubject"
+                    name="subject"
+                    required
+                    placeholder="¿En qué podemos ayudarte?"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="contactMessage">Mensaje</label>
+                  <textarea
+                    id="contactMessage"
+                    name="message"
+                    required
+                    rows="5"
+                    placeholder="Cuéntanos más..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary">
+                  <i class="ph ph-paper-plane-tilt"></i>
+                  Enviar mensaje
+                </button>
+              </form>
+            </div>
+
+            <!-- Formulario de Reporte de Problemas -->
+            <div class="support-card">
+              <div class="card-icon error">
+                <i class="ph-fill ph-warning"></i>
+              </div>
+              <h2>Reportar problema</h2>
+              <p>¿Encontraste un error? Ayúdanos a mejorarlo reportándolo.</p>
+
+              <form id="reportForm" class="support-form">
+                <div class="form-group">
+                  <label for="reportEmail">Email</label>
+                  <input
+                    type="email"
+                    id="reportEmail"
+                    name="email"
+                    required
+                    placeholder="tu@email.com"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="problemType">Tipo de problema</label>
+                  <select id="problemType" name="problemType" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="error_carga">Error al cargar página</option>
+                    <option value="error_login">Problema con inicio de sesión</option>
+                    <option value="error_articulo">Error en artículo</option>
+                    <option value="error_comentarios">Problema con comentarios</option>
+                    <option value="error_busqueda">Error en búsqueda</option>
+                    <option value="error_responsive">Problema de visualización (móvil/tablet)</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="reportUrl">URL donde ocurrió</label>
+                  <input
+                    type="url"
+                    id="reportUrl"
+                    name="url"
+                    placeholder="https://..."
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="reportDescription">Descripción del problema</label>
+                  <textarea
+                    id="reportDescription"
+                    name="description"
+                    required
+                    rows="5"
+                    placeholder="Describe qué sucedió, qué esperabas que sucediera, pasos para reproducirlo..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn-error">
+                  <i class="ph ph-warning-circle"></i>
+                  Reportar problema
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- Información de contacto -->
+          <div class="contact-info">
+            <h3>Otras formas de contacto</h3>
+            <div class="info-grid">
+              <div class="info-item">
+                <i class="ph-fill ph-envelope-simple"></i>
+                <div>
+                  <strong>Email</strong>
+                  <p>stechblog.office@gmail.com</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <i class="ph-fill ph-clock"></i>
+                <div>
+                  <strong>Tiempo de respuesta</strong>
+                  <p>24-48 horas hábiles</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div id="footer"></div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+
+<header class="site-header">
+  <div class="header-left">
+    <div class="brand">S-Tech</div>
+  </div>
+
+  <nav class="nav" id="main-nav">
+    <button class="nav-link active" data-go="#/">Inicio</button>
+    <button class="nav-link" data-go="#/articulos">Artículos</button>
+    <button class="nav-link" data-go="#/sobre">Sobre</button>
+    <button class="nav-link" data-go="#/soporte">Soporte</button>
+  </nav>
+
+  <div class="actions">
+    <div class="search-container desktop-search">
+      <i class="ph ph-magnifying-glass search-icon"></i>
+      <input id="search" placeholder="Buscar artículos…" aria-label="Buscar"/>
+    </div>
+    <button id="btn-login" class="icon-btn" title="Iniciar Sesión">
+      <i class="ph ph-user-circle"></i>
+    </button>
+    <button id="btn-editor" class="icon-btn" title="Editor" style="display: none;">
+      <i class="ph ph-pencil"></i>
+    </button>
+    <button id="btn-search-toggle" class="icon-btn mobile-only" title="Buscar">
+      <i class="ph ph-magnifying-glass"></i>
+    </button>
+    <button id="toggle-dark" class="icon-btn" title="Modo oscuro">🌙</button>
+    <button id="menu-toggle" class="icon-btn mobile-only" title="Menú">
+      <i class="ph ph-list"></i>
+    </button>
+  </div>
+
+  <div class="search-container mobile-search-overlay" id="mobile-search-container">
+    <i class="ph ph-magnifying-glass search-icon"></i>
+    <input id="search-mobile" placeholder="Buscar artículos…" aria-label="Buscar"/>
+    <button id="btn-search-close" class="icon-btn" title="Cerrar búsqueda">
+      <i class="ph ph-x"></i>
+    </button>
+  </div>
+</header>

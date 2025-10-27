@@ -1,0 +1,49 @@
+@import "./base/index.css" layer(reset);
+@import "./utilities/index.css" layer(utilities);
+@import "./components/toast.css" layer(components);
+@import "./layout/header.css" layer(layout);
+@import "./layout/footer.css" layer(layout);
+@import "./pages/home.css" layer(pages);
+@import "./pages/articulos.css" layer(pages);
+@import "./pages/sobre.css" layer(pages);
+@import "./pages/articulo.css" layer(pages);
+@import "./pages/login.css" layer(pages);
+@import "./pages/editor.css" layer(pages);
+@import "./pages/soporte.css" layer(pages);
+
+@layer base {
+  :root {
+    --bg: #0f172a;
+    --card: #0b1224;
+    --text: #e5e7eb;
+    --muted: #9aa3b2;
+    --brand: #60a5fa;
+    --accent: #22d3ee;
+    --ring: #1f2a44;
+    --bg-light: #f7f8fb;
+    --card-light: #ffffff;
+    --text-dark: #0b1020;
+    --muted-dark: #495160;
+    --brand-dark: #1f4ef5;
+    --accent-dark: #06b6d4;
+    --ring-light: #e8ecf6;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, sans-serif;
+    background: var(--bg-light);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  html.dark body {
+    background: var(--bg);
+    color: var(--text);
+  }
+
+  .app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}

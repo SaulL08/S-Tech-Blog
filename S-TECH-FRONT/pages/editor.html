@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editor de Artículos • S-Tech</title>
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="icon" type="image/x-icon" href="../assets/img/fabicon-icon.png"/>
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.tiny.cloud/1/b7x20zpc7dp5gk3hhk4pbn1nmtnrlbxaczaafb2kmn985ed4/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+</head>
+<body class="editor-page">
+  <div class="editor-container">
+    <header class="editor-header">
+      <div class="editor-title">
+        <h1>Editor de Artículos</h1>
+        <button id="btn-back" class="btn-secondary">
+          <i class="ph ph-arrow-left"></i> Volver
+        </button>
+      </div>
+      <div class="editor-actions">
+        <button id="toggle-dark" class="btn-icon" title="Modo oscuro">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button id="btn-subscribers" class="btn-secondary">
+          <i class="ph ph-users"></i> Suscriptores
+        </button>
+        <button id="btn-draft" class="btn-draft">
+          <i class="ph ph-floppy-disk"></i> Guardar Borrador
+        </button>
+        <button id="btn-publish" class="btn-publish">
+          <i class="ph ph-paper-plane-tilt"></i> Publicar
+        </button>
+      </div>
+    </header>
+
+    <form class="editor-form" id="editor-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="title">Título del Artículo *</label>
+          <input type="text" id="title" name="title" placeholder="Ej: Guía completa de JavaScript" required />
+        </div>
+      </div>
+
+      <div class="form-row two-cols">
+        <div class="form-group">
+          <label for="cat">Categoría *</label>
+          <select id="cat" name="cat" required>
+            <option value="">Seleccionar...</option>
+            <option value="Programación">Programación</option>
+            <option value="IA">IA</option>
+            <option value="Ciberseguridad">Ciberseguridad</option>
+            <option value="Cloud">Cloud</option>
+            <option value="Gadgets">Gadgets</option>
+            <option value="Noticias">Noticias</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="read">Tiempo de lectura</label>
+          <input type="text" id="read" name="read" placeholder="Ej: 5 min" />
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="excerpt">Extracto / Descripción *</label>
+          <textarea id="excerpt" name="excerpt" rows="2" placeholder="Resumen breve del artículo..." required></textarea>
+        </div>
+      </div>
+
+      <div class="form-row two-cols">
+        <div class="form-group">
+          <label for="imageUrl">URL de Imagen de Portada</label>
+          <input type="url" id="imageUrl" name="imageUrl" placeholder="https://..." />
+          <button type="button" class="btn-upload" data-target="imageUrl">
+            <i class="ph ph-upload"></i> Subir Imagen
+          </button>
+        </div>
+        <div class="form-group">
+          <label for="videoUrl">URL de Video (YouTube o directo)</label>
+          <input type="url" id="videoUrl" name="videoUrl" placeholder="https://youtube.com/..." />
+          <button type="button" class="btn-upload" data-target="videoUrl">
+            <i class="ph ph-upload"></i> Subir Video
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="content">Contenido del Artículo *</label>
+        <textarea id="content" name="content"></textarea>
+      </div>
+
+      <input type="hidden" id="article-id" name="id" />
+    </form>
+  </div>
+
+  <input type="file" id="file-input" style="display: none" accept="image/*,video/*,application/pdf" />
+
+  <script type="module" src="../assets/js/pages/editor.js"></script>
+</body>
+</html>

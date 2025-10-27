@@ -1,0 +1,52 @@
+<article class="article-page">
+  <header class="article-header">
+    <div class="article-meta-top">
+      <span class="article-badge" id="article-cat"></span>
+      <span class="article-date" id="article-date"></span>
+      <span class="article-read" id="article-read"></span>
+    </div>
+    <h1 class="article-title" id="article-title"></h1>
+    <div class="article-author">
+      <span>Por <strong id="article-author"></strong></span>
+    </div>
+  </header>
+
+  <div class="article-toolbar">
+    <button id="btn-font-decrease" title="Disminuir tamaño de fuente" aria-label="Disminuir fuente">A-</button>
+    <button id="btn-font-increase" title="Aumentar tamaño de fuente" aria-label="Aumentar fuente">A+</button>
+    <button id="btn-listen" title="Escuchar artículo" aria-label="Escuchar">🔊</button>
+    <button id="btn-share" title="Compartir" aria-label="Compartir">📤</button>
+    <button id="btn-like" class="btn-like" title="Me gusta" aria-label="Me gusta">
+      <i class="ph ph-heart"></i>
+      <span id="article-likes-count">0</span>
+    </button>
+  </div>
+
+  <div class="article-image" id="article-image-container"></div>
+
+  <div class="article-video" id="article-video-container"></div>
+
+  <div class="article-content" id="article-content"></div>
+
+  <section class="article-comments">
+    <h3>Comentarios</h3>
+    <form class="comment-form" id="comment-form">
+      <input type="text" id="comment-name" placeholder="Tu nombre" required />
+      <input type="email" id="comment-email" placeholder="Tu correo (opcional, para notificaciones)" />
+      <textarea id="comment-text" placeholder="Escribe tu comentario..." rows="4" required></textarea>
+      <label class="subscribe-checkbox">
+        <input type="checkbox" id="subscribe-updates" />
+        <span>Suscribirme para recibir notificaciones de nuevos artículos</span>
+      </label>
+      <button type="submit">Publicar comentario</button>
+    </form>
+    <div class="comments-list" id="comments-list">
+      <p class="no-comments">Cargando comentarios...</p>
+    </div>
+  </section>
+
+  <section class="article-recommendations">
+    <h3>Artículos recomendados</h3>
+    <div class="recommendations-grid" id="recommendations-grid"></div>
+  </section>
+</article>
