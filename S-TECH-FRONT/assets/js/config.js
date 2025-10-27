@@ -9,7 +9,7 @@ const ENV = {
 // URLs de API según el entorno
 const API_URLS = {
   development: 'http://localhost:4000/api',
-  production: '' // Se configurará cuando tengas el dominio de producción
+  production: 'https://s-tech-blog-production.up.railway.app/api'
 };
 
 // URLs del frontend según el entorno
