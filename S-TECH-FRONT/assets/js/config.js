@@ -15,7 +15,7 @@ const API_URLS = {
 // URLs del frontend según el entorno
 const FRONTEND_URLS = {
   development: 'http://127.0.0.1:5500',
-  production: '' // Se configurará cuando tengas el dominio de producción
+  production: 'https://s-tech-blog.vercel.app'
 };
 
 // Configuración de la aplicación
