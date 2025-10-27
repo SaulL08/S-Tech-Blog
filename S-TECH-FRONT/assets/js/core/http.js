@@ -1,6 +1,6 @@
 import { apiUrl } from '../config.js';
 
-const DATA_URL = "/S-TECH-FRONT/assets/data/posts.json";
+const DATA_URL = "/assets/data/posts.json";
 
 function mapFromApi(post) {
   return {

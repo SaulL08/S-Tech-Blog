@@ -4,17 +4,17 @@ import { $, $$, inject, setActiveNav } from './core/dom.js';
 const DARK_KEY = 'stech-dark';
 
 const routes = {
-  '/': { view: '/S-TECH-FRONT/assets/pages/home.html', module: './pages/home.js' },
-  '/articulos': { view: '/S-TECH-FRONT/assets/pages/articulos.html', module: './pages/articulos.js' },
-  '/sobre': { view: '/S-TECH-FRONT/assets/pages/sobre.html', module: './pages/sobre.js' },
-  '/soporte': { view: '/S-TECH-FRONT/assets/pages/soporte.html', module: './pages/soporte.js' }
+  '/': { view: '/assets/pages/home.html', module: './pages/home.js' },
+  '/articulos': { view: '/assets/pages/articulos.html', module: './pages/articulos.js' },
+  '/sobre': { view: '/assets/pages/sobre.html', module: './pages/sobre.js' },
+  '/soporte': { view: '/assets/pages/soporte.html', module: './pages/soporte.js' }
 };
 
 async function loadPage(hash) {
   const path = hash.replace('#', '') || '/';
   
   if (path.startsWith('/articulo/')) {
-    await inject('#view', '/S-TECH-FRONT/assets/pages/articulo.html');
+    await inject('#view', '/assets/pages/articulo.html');
     const mod = await import('./pages/articulo.js');
     if (mod.onload) mod.onload();
     setActiveNav('#/articulos');
@@ -22,12 +22,12 @@ async function loadPage(hash) {
   }
 
   if (path.startsWith('/editor')) {
-    window.location.href = '/S-TECH-FRONT/pages/editor.html' + hash;
+    window.location.href = '/pages/editor.html' + hash;
     return;
   }
 
   if (path === '/login') {
-    window.location.href = '/S-TECH-FRONT/pages/login.html';
+    window.location.href = '/pages/login.html';
     return;
   }
   
@@ -42,8 +42,8 @@ async function loadPage(hash) {
 }
 
 async function initApp() {
-  await inject('#header', '/S-TECH-FRONT/assets/layouts/header.html');
-  await inject('#footer', '/S-TECH-FRONT/assets/layouts/footer.html');
+  await inject('#header', '/assets/layouts/header.html');
+  await inject('#footer', '/assets/layouts/footer.html');
 
   if (localStorage.getItem(DARK_KEY) === '1') {
     document.documentElement.classList.add('dark');

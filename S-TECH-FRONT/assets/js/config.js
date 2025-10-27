@@ -61,9 +61,9 @@ export const CONFIG = {
   
   // URLs de recursos estáticos
   ASSETS: {
-    IMAGES_PATH: '/S-TECH-FRONT/assets/img',
-    CSS_PATH: '/S-TECH-FRONT/assets/css',
-    JS_PATH: '/S-TECH-FRONT/assets/js'
+    IMAGES_PATH: '/assets/img',
+    CSS_PATH: '/assets/css',
+    JS_PATH: '/assets/js'
   },
   
   // TinyMCE API Key

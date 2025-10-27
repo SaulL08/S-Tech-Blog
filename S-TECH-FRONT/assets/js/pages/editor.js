@@ -12,7 +12,7 @@ let autoSaveInterval;
 if (!isAuthenticated()) {
   toast.error('Debes iniciar sesión para acceder al editor');
   setTimeout(() => {
-    window.location.href = '/S-TECH-FRONT/pages/login.html';
+    window.location.href = '/pages/login.html';
   }, 2000);
 }
 
